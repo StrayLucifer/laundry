@@ -11,8 +11,8 @@ void ExpenseRecord::display() // распечатываем все расход�
 		IterExpenses = VectorExpenses.begin();
 		while (IterExpenses != VectorExpenses.end())
 		{ // распечатываем все расходы
-			cout << (*IterExpenses)->Month << '/' << (*IterExpenses)->Day << '\t' << (*IterExpenses)->Payee << '\t' << '\t';
-			cout << (*IterExpenses)->Amount << '\t' << (*IterExpenses)->Category << endl;
+			cout << (*IterExpenses)->getMonth() << '/' << (*IterExpenses)->getDay() << '\t' << (*IterExpenses)->getPayee() << '\t' << '\t';
+			cout << (*IterExpenses)->getAmount() << '\t' << (*IterExpenses)->getCategory() << endl;
 			IterExpenses++;
 		}
 		cout << endl;
@@ -30,7 +30,7 @@ void ExpenseRecord:: annualReport(Income& _Income, Expense& _Expense)
 	while (IterExpenses != VectorExpenses.end())
 	{
 		//выводим на экран категории расходов
-		cout << '\t' << ((*IterExpenses)->Category) << '\t' << ((*IterExpenses)->Amount) << endl;
+		cout << '\t' << ((*IterExpenses)->getCategory()) << '\t' << ((*IterExpenses)->getAmount()) << endl;
 		IterExpenses++;
 	}
 	cout << "Расходы всего:\t\t";
