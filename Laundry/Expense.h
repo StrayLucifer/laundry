@@ -1,16 +1,27 @@
 #include <string>
 class Expense
 {
-public:
-	int Month, Day; // месяц и день уплаты расходов
+private:
+	int Month = 0, Day = 0; // месяц и день уплаты расходов
 	string Category; // категория расходов (газ, свет, ремонт и тд) 
 	string Payee; // кому платим (поставщики газа, света, сервисный центр...)
-	float Amount; // сколько платим
+	int Amount = 0; // сколько платим
+	int TotalExpense = 0;
+public:
 	Expense()
 	{ }
-	Expense(int m, int d, string c, string p, float a) :
+	Expense(int m, int d, string c, string p, int a) :
 		Month(m), Day(d), Category(c), Payee(p), Amount(a)
 	{
 		/* тут пусто! */
 	}
+	void setTotalExpense(int expens);
+	int getTotalExpense();
+	int getMonth();
+	int getDay();
+	int getAmount();
+	string getCategory();
+	string getPayee();
+
+
 };
