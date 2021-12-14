@@ -5,15 +5,16 @@
 
 using namespace std; 
 
+//РљР»Р°СЃСЃ Р·Р°РїРёСЃРµР№ Рѕ Р·Р°С‚СЂР°С‚Р°С…
 class ExpenseRecord
 {
+private:
+	vector<Expense*> VectorExpenses; //РІРµРєС‚РѕСЂ СѓРєР°Р·Р°С‚РµР»РµР№ РЅР° СЂР°СЃС…РѕРґС‹
+	vector<Expense*>::iterator IterExpenses;
 public:
 	~ExpenseRecord();
 	void insertExp(Expense*);
 	void display();
-	//float displaySummary(); // нужно для годового отчета
-
-private:
-	vector<Expense*> VectorExpenses; //вектор указателей на расходы
-	vector<Expense*>::iterator IterExpenses;
+	void annualReport(Income& _Income, Expense &_Expense);
+	//float displaySummary(); // РЅСѓР¶РЅРѕ РґР»СЏ РіРѕРґРѕРІРѕРіРѕ РѕС‚С‡РµС‚Р°
 };

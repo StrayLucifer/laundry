@@ -1,16 +1,16 @@
 #include "ExpenseRecord.h"
 
-void ExpenseRecord::display() // распечатываем все расходы
+void ExpenseRecord::display() // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
 {
-	cout << "\nДата\tПолучатель\tСумма\tКатегория\n"
+	cout << "\nР”Р°С‚Р°\tРџРѕР»СѓС‡Р°С‚РµР»СЊ\tРЎСѓРјРјР°\tРљР°С‚РµРіРѕСЂРёСЏ\n"
 		<< "----------------------------------------\n" << endl;
-	if (VectorExpenses.size() == 0) // В контейнере нет расходов
-		cout << "***Расходов нет***\n" << endl;
+	if (VectorExpenses.size() == 0) // Р’ РєРѕРЅС‚РµР№РЅРµСЂРµ РЅРµС‚ СЂР°СЃС…РѕРґРѕРІ
+		cout << "***Р Р°СЃС…РѕРґРѕРІ РЅРµС‚***\n" << endl;
 	else
 	{
 		IterExpenses = VectorExpenses.begin();
 		while (IterExpenses != VectorExpenses.end())
-		{ // распечатываем все расходы
+		{ // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
 			cout << (*IterExpenses)->Month << '/' << (*IterExpenses)->Day << '\t' << (*IterExpenses)->Payee << '\t' << '\t';
 			cout << (*IterExpenses)->Amount << '\t' << (*IterExpenses)->Category << endl;
 			IterExpenses++;
@@ -19,14 +19,35 @@ void ExpenseRecord::display() // распечатываем все расходы
 	}
 }
 
+void ExpenseRecord:: annualReport(Income& _Income, Expense& _Expense)
+{
+	cout << "Р“РѕРґРѕРІРѕР№ РѕС‚С‡РµС‚\n--------------\n" << endl;
+	cout << "Р”РѕС…РѕРґС‹\n" << endl;
+	cout << "\tРџСЂРёР±С‹Р»СЊ:\t\t";
+	cout << _Income.getTotalProfit() << endl;
+	cout << "Р Р°СЃС…РѕРґС‹\n" << endl;
+	IterExpenses=VectorExpenses.begin();
+	while (IterExpenses != VectorExpenses.end())
+	{
+		//РІС‹РІРѕРґРёРј РЅР° СЌРєСЂР°РЅ РєР°С‚РµРіРѕСЂРёРё СЂР°СЃС…РѕРґРѕРІ
+		cout << '\t' << ((*IterExpenses)->Category) << '\t' << ((*IterExpenses)->Amount) << endl;
+		IterExpenses++;
+	}
+	cout << "Р Р°СЃС…РѕРґС‹ РІСЃРµРіРѕ:\t\t";
+	cout << _Expense.getTotalExpense() << endl;
+	// РІС‹С‡РёСЃР»СЏРµРј РїСЂРёР±С‹Р»СЊРЅРѕСЃС‚СЊ
+	cout << "\nР‘Р°Р»Р°РЅСЃ:\t\t\t" << _Income.getTotalProfit()-_Expense.getTotalExpense() << endl;
+	cout << "\n";
+}
+
 void ExpenseRecord::insertExp(Expense* ptrExp)
 {
 	VectorExpenses.push_back(ptrExp);
 }
 
-ExpenseRecord::~ExpenseRecord() // деструктор
-{ // удалить объекты expense
-// удалить указатели на вектор
+ExpenseRecord::~ExpenseRecord() // РґРµСЃС‚СЂСѓРєС‚РѕСЂ
+{ // СѓРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚С‹ expense
+// СѓРґР°Р»РёС‚СЊ СѓРєР°Р·Р°С‚РµР»Рё РЅР° РІРµРєС‚РѕСЂ
 	while (!VectorExpenses.empty())
 	{
 		IterExpenses = VectorExpenses.begin();
