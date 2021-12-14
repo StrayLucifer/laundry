@@ -7,19 +7,21 @@ using namespace std;
 class Client
 {
 private:
-	string name; // имя клиента
-	string phone;  // номер телефона клиента
-	int date;
-	int month;
-	int pay;
+	string Name; // РёРјСЏ РєР»РёРµРЅС‚Р°
+	string Phone;  // РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РєР»РёРµРЅС‚Р°
+	string TypeOfService;
+	int Date;
+	int Month;
+	int Pay;
 public:
 	Client();
-	Client(string n, string t, int d, int m, int p);
+	Client(string name, string phone, string typeofservice, int date, int month, int pay);
 	//~Client();
-	string getName(); //возвращает ФИО клиента
-	string getPhone(); //возвращает номер телефона клиента
+	string getName(); //РІРѕР·РІСЂР°С‰Р°РµС‚ Р¤РРћ РєР»РёРµРЅС‚Р°
+	string getPhone(); //РІРѕР·РІСЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РєР»РёРµРЅС‚Р°
+	string getTypeOfService();
 	int getDate();
 	int getMonth();
 	int getPay();
 
-};
+}; 

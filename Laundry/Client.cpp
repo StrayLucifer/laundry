@@ -1,33 +1,38 @@
 #include "Client.h"
 
-string Client::getName() //геттер возвращает ФИО клиента
+string Client::getName() //РіРµС‚С‚РµСЂ РІРѕР·РІСЂР°С‰Р°РµС‚ Р¤РРћ РєР»РёРµРЅС‚Р°
 {
-	return name;
+	return Name;
 }
 //--------------------------------------------------------
 
-string Client::getPhone() //геттер возвращает ФИО клиента
+string Client::getPhone() //РіРµС‚С‚РµСЂ РІРѕР·РІСЂР°С‰Р°РµС‚ Р¤РРћ РєР»РёРµРЅС‚Р°
 {
-	return phone;
+	return Phone;
 }
 //--------------------------------------------------------
 
 int Client::getDate()
 {
-	return date;
+	return Date;
 }
 
 int Client::getMonth()
 {
-	return month;
+	return Month;
 }
 
 int Client::getPay()
 {
-	return pay;
+	return Pay;
 }
 
-Client::Client(string n, string t, int d, int m, int p) : name(n), phone(t), date(d), month(m), pay(p)
+string Client::getTypeOfService()
 {
-	/* тут пусто */
+	return TypeOfService;
+}
+
+Client::Client(string name, string phone, string typeofservice, int date, int month, int pay) : Name(name), Phone(phone), TypeOfService(typeofservice), Date(date), Month(month), Pay(pay)
+{
+	/* С‚СѓС‚ РїСѓСЃС‚Рѕ */
 }
