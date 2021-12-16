@@ -2,7 +2,6 @@
 #include <conio.h>
 #include "UserInterface.h"
 
-
 void UserInterface::interact()
 {
 	Client _Client;
@@ -29,7 +28,7 @@ void UserInterface::interact()
 
 			case '1':
 				cout << "\n";
-				_ClientInputScreen.setClient(_ListOfClients,_Income);
+				_ClientInputScreen.setClient(_ListOfClients, _Income);
 				break;
 			case '2':
 				cout << "\n";
@@ -75,7 +74,7 @@ void UserInterface::interact()
 				break;
 			case '4':
 				cout << "\n";
-				_ExpenseRecord.annualReport(_Income,_Expense);
+				_ExpenseRecord.annualReport(_Income, _Expense);
 				system("pause");
 				system("cls");
 				break;

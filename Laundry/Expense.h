@@ -1,4 +1,9 @@
+#ifndef Expense_H
+#define Expense_H
+#include <iostream>
 #include <string>
+using namespace std;
+
 class Expense
 {
 private:
@@ -23,5 +28,5 @@ public:
 	string getCategory();
 	string getPayee();
 
-
 };
+#endif

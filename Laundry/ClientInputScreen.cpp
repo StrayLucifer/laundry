@@ -1,6 +1,6 @@
 #include "ClientInputScreen.h"
 
-void ClientInputScreen::setClient(ListOfClients& _ListOfClients) // добавить данные о клиенте
+void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income) // добавить данные о клиенте
 {
 	cout << "¬ведите ‘»ќ клиента: " << endl;
 	tName = "";
@@ -8,21 +8,45 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients) // добавить дан
 	{
 		getline(cin, tName);
 	}
-	cout << "\n";
+	system("cls");
 	cout << "¬ведите номер телефона:" << endl;
 	cout << "+";
 	getline(cin, tPhone);
-	cout << "\n";
+	system("cls");
+	cout << "“ип услуги:" << endl;
+	getline(cin, tTypeOfService);
+	system("cls");
 	cout << "¬ведите дату:" << endl;
 	cin >> tDate;
-	cout << "\n";
-	cout << "¬ведите мес€ц:" << endl;
-	cin >> tMonth;
-	cout << "\n";
-	cout << "¬ведите стоимость услуги:" << endl;
-	cin >> tPay;
-	cout << "\n";
-	Client* ptrClient = new Client(tName, tPhone, tDate, tMonth, tPay); // создать клиента
+	do
+	{
+		system("cls");
+		cout << "¬ведите мес€ц:" << endl;
+		cin >> tMonth;
+		if (tMonth > 12 || tMonth <= 0)
+		{
+			cout << "¬ведЄн неправльный формат мес€ца" << endl;
+			cout << "\n";
+			system("pause");
+		}
+		else break;
+	} while (true);
+	system("cls");
+	do
+	{
+		system("cls");
+		cout << "¬ведите стоимость услуги:" << endl;
+		cin >> tPay;
+		if (tPay < 0)
+		{
+			cout << "¬ведЄн неправльный формат стоимости услуги" << endl;
+			cout << "\n";
+			system("pause");
+		}
+		else break;
+	} while (true);
+	system("cls");
+	_Income.setIncomeMonth(tMonth, tPay);
+	Client* ptrClient = new Client(tName, tPhone, tTypeOfService, tDate, tMonth, tPay); // создать клиента
 	_ListOfClients.insertClient(ptrClient); // занести в список клиента
 }
-//---------------------------------------------------------

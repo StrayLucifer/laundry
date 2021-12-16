@@ -1,16 +1,16 @@
 #include "ExpenseRecord.h"
 
-void ExpenseRecord::display() // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
+void ExpenseRecord::display() // распечатываем все расходы
 {
-	cout << "\nР”Р°С‚Р°\tРџРѕР»СѓС‡Р°С‚РµР»СЊ\tРЎСѓРјРјР°\tРљР°С‚РµРіРѕСЂРёСЏ\n"
+	cout << "\nДата\tПолучатель\tСумма\tКатегория\n"
 		<< "----------------------------------------\n" << endl;
-	if (VectorExpenses.size() == 0) // Р’ РєРѕРЅС‚РµР№РЅРµСЂРµ РЅРµС‚ СЂР°СЃС…РѕРґРѕРІ
-		cout << "***Р Р°СЃС…РѕРґРѕРІ РЅРµС‚***\n" << endl;
+	if (VectorExpenses.size() == 0) // В контейнере нет расходов
+		cout << "***Расходов нет***\n" << endl;
 	else
 	{
 		IterExpenses = VectorExpenses.begin();
 		while (IterExpenses != VectorExpenses.end())
-		{ // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС‹
+		{ // распечатываем все расходы
 			cout << (*IterExpenses)->getMonth() << '/' << (*IterExpenses)->getDay() << '\t' << (*IterExpenses)->getPayee() << '\t' << '\t';
 			cout << (*IterExpenses)->getAmount() << '\t' << (*IterExpenses)->getCategory() << endl;
 			IterExpenses++;
@@ -21,22 +21,22 @@ void ExpenseRecord::display() // СЂР°СЃРїРµС‡Р°С‚С‹РІР°РµРј РІСЃРµ СЂР°СЃС…РѕРґС
 
 void ExpenseRecord:: annualReport(Income& _Income, Expense& _Expense)
 {
-	cout << "Р“РѕРґРѕРІРѕР№ РѕС‚С‡РµС‚\n--------------\n" << endl;
-	cout << "Р”РѕС…РѕРґС‹\n" << endl;
-	cout << "\tРџСЂРёР±С‹Р»СЊ:\t\t";
+	cout << "Годовой отчет\n--------------\n" << endl;
+	cout << "Доходы\n" << endl;
+	cout << "\tПрибыль:\t\t";
 	cout << _Income.getTotalProfit() << endl;
-	cout << "Р Р°СЃС…РѕРґС‹\n" << endl;
+	cout << "Расходы\n" << endl;
 	IterExpenses=VectorExpenses.begin();
 	while (IterExpenses != VectorExpenses.end())
 	{
-		//РІС‹РІРѕРґРёРј РЅР° СЌРєСЂР°РЅ РєР°С‚РµРіРѕСЂРёРё СЂР°СЃС…РѕРґРѕРІ
+		//выводим на экран категории расходов
 		cout << '\t' << ((*IterExpenses)->getCategory()) << '\t' << ((*IterExpenses)->getAmount()) << endl;
 		IterExpenses++;
 	}
-	cout << "Р Р°СЃС…РѕРґС‹ РІСЃРµРіРѕ:\t\t";
+	cout << "Расходы всего:\t\t";
 	cout << _Expense.getTotalExpense() << endl;
-	// РІС‹С‡РёСЃР»СЏРµРј РїСЂРёР±С‹Р»СЊРЅРѕСЃС‚СЊ
-	cout << "\nР‘Р°Р»Р°РЅСЃ:\t\t\t" << _Income.getTotalProfit()-_Expense.getTotalExpense() << endl;
+	// вычисляем прибыльность
+	cout << "\nБаланс:\t\t\t" << _Income.getTotalProfit()-_Expense.getTotalExpense() << endl;
 	cout << "\n";
 }
 
@@ -45,9 +45,9 @@ void ExpenseRecord::insertExp(Expense* ptrExp)
 	VectorExpenses.push_back(ptrExp);
 }
 
-ExpenseRecord::~ExpenseRecord() // РґРµСЃС‚СЂСѓРєС‚РѕСЂ
-{ // СѓРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚С‹ expense
-// СѓРґР°Р»РёС‚СЊ СѓРєР°Р·Р°С‚РµР»Рё РЅР° РІРµРєС‚РѕСЂ
+ExpenseRecord::~ExpenseRecord() // деструктор
+{ // удалить объекты expense
+// удалить указатели на вектор
 	while (!VectorExpenses.empty())
 	{
 		IterExpenses = VectorExpenses.begin();

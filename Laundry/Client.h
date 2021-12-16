@@ -1,6 +1,8 @@
+#ifndef Client_H
+#define Client_H
+
 #include <string>
 #include <iostream>
-//#include <ListOfClients.h>
 
 using namespace std;
 
@@ -25,3 +27,4 @@ public:
 	int getPay();
 
 }; 
+#endif

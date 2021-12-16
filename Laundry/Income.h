@@ -1,3 +1,5 @@
+#ifndef Income_H
+#define Income_H
 #include <iostream>
 using namespace std;
 
@@ -12,3 +14,4 @@ public:
 	int getTotalProfit();
 	void display();
 };
+#endif

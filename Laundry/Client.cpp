@@ -36,3 +36,8 @@ Client::Client(string name, string phone, string typeofservice, int date, int mo
 {
 	/* тут пусто */
 }
+
+Client::Client()
+{
+
+}

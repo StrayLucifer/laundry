@@ -1,3 +1,5 @@
+#ifndef ListOfClients_H
+#define ListOfClients_H
 #include <list>
 #include "Client.h" 
 //////////////////Класс ListOfClients//////////////////////
@@ -13,3 +15,4 @@ public:
 	void display(); // вывод списка клиентов
 	void DeleteClient();
 }; // конец класса ListOfClients
+#endif

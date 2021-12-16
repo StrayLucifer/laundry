@@ -1,7 +1,10 @@
+#ifndef ExpenseRecord_H
+#define ExpenseRecord_H
 #include <iostream>
 #include <vector>
 #include <list>
 #include "Expense.h"
+#include "Income.h"
 
 using namespace std; 
 
@@ -18,3 +21,4 @@ public:
 	void annualReport(Income& _Income, Expense &_Expense);
 	//float displaySummary(); // нужно для годового отчета
 };
+#endif

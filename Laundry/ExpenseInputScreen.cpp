@@ -5,23 +5,23 @@ void ExpenseInputScreen::setExpense(ExpenseRecord& ExpenseRecord, Expense & _Exp
 	int month, day;
 	string category, payee;
 	float amount;
-	cout << "Р’РІРµРґРёС‚Рµ РјРµСЃСЏС† (1-12): ";
+	cout << "Введите месяц (1-12): ";
 	cin >> month;
 	cin.ignore(80, '\n');
-	cout << "Р’РІРµРґРёС‚Рµ РґРµРЅСЊ (1-31): ";
+	cout << "Введите день (1-31): ";
 	cin >> day;
 	cin.ignore(80, '\n');
-	cout << "Р’РІРµРґРёС‚Рµ РєР°С‚РµРіРѕСЂРёСЋ СЂР°СЃС…РѕРґРѕРІ (Р РµРјРѕРЅС‚, РќР°Р»РѕРіРё): ";
+	cout << "Введите категорию расходов (Ремонт, Налоги): ";
 	getline(cin, category);
-	cout << "Р’РІРµРґРёС‚Рµ РїРѕР»СѓС‡Р°С‚РµР»СЏ (РџСЂРѕСЃС‚РѕРєРІР°С€РёРЅРѕР­Р»РµРєС‚СЂРѕРЎР±С‹С‚): ";
+	cout << "Введите получателя (ПростоквашиноЭлектроСбыт): ";
 	getline(cin, payee);
-	cout << "Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ (39.95): ";
+	cout << "Введите сумму (39.95): ";
 	cin >> amount;
 	_Expense.setTotalExpense(amount);
 	cin.ignore(80, '\n');
-	// СЃРѕР·РґР°РµРј РЅРѕРІС‹Р№ СЂР°СЃС…РѕРґ
+	// создаем новый расход
 	Expense* ptrExpense = new Expense(month, day, category, payee, amount);
-	// РІСЃС‚Р°РІР»СЏРµРј СЂР°СЃС…РѕРґ РІ СЃРїРёСЃРѕРє РІСЃРµС… СЂР°СЃС…РѕРґРѕРІ
+	// вставляем расход в список всех расходов
 	ExpenseRecord.insertExp(ptrExpense);
 	cout << "\n";
 }

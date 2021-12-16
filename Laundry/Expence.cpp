@@ -1,4 +1,5 @@
-﻿#incude "Expence.h"
+﻿#include "Expense.h"
+
 int Expense::getTotalExpense()
 {
 	return TotalExpense;
