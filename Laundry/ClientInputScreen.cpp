@@ -10,9 +10,14 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	}
 	system("cls");
 	cout << "Введите номер телефона:" << endl;
-	cout << "+";
-	getline(cin, tPhone);
-	system("cls");
+	do
+	{
+		cout << "+";
+		getline(cin, tPhone);
+		if (tPhone.size() < 11 || tPhone.size() > 11)// Слишком длинная ИЛИ слишком короткая
+			cout << "\nОшибка,повторите ввод\n";
+	} while (tPhone.size() < 11 || (tPhone.size() > 11));
+
 	cout << "Тип услуги:" << endl;
 	getline(cin, tTypeOfService);
 	system("cls");

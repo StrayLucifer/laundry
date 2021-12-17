@@ -63,7 +63,8 @@ void ListOfClients::insertClient(Client* ptrT)
 
 void ListOfClients::display() // вывод списка клиентов
 {
-	cout << "\nФИО клиента\tНомер телефона\tТип услуги\tДата\tСтоимость услуги\n--------------------------------------------------------\n";
+	cout << setw(30) << "ФИО клиента " << " || "  << "Номер телефона" << setw(14) << " || "  << "Тип услуги " << setw(8) <<  " || " << "Дата" << setw(15) << " || " << "Стоимость услуги" << endl;
+	//cout << "\nФИО клиента\tНомер телефона\tТип услуги\tДата\tСтоимость услуги\n--------------------------------------------------------\n";
 	if (ListClient.empty()) // если список клиентов пуст
 		cout << "***Клиентов нет***\n" << endl; // выводим запись, что он пуст)
 	else
@@ -71,7 +72,7 @@ void ListOfClients::display() // вывод списка клиентов
 		IterClient = ListClient.begin();
 		while (IterClient != ListClient.end()) // распечатываем всех жильцов
 		{
-			cout << (*IterClient)->getName() << " || " << (*IterClient)->getPhone() << " || " << (*IterClient)->getTypeOfService() << " || " << (*IterClient)->getDate() << "." << (*IterClient)->getMonth() << " || " << (*IterClient)->getPay() << endl;
+			cout << setw(30) << (*IterClient)->getName() << " || " << setw(13) << "+" <<(*IterClient)->getPhone() << " || "<< setw(15) << (*IterClient)->getTypeOfService() << " || " << setw(12) << (*IterClient)->getDate() << "." << (*IterClient)->getMonth() << " || " << setw(7)<< (*IterClient)->getPay() << endl;
 			*IterClient++;
 		}
 	}

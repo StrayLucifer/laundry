@@ -25,6 +25,5 @@ public:
 	int getDate();
 	int getMonth();
 	int getPay();
-
 }; 
 #endif
