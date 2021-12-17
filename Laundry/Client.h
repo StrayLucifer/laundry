@@ -18,7 +18,7 @@ private:
 public:
 	Client();
 	Client(string name, string phone, string typeofservice, int date, int month, int pay);
-	//~Client();
+	~Client(); 
 	string getName(); //возвращает ФИО клиента
 	string getPhone(); //возвращает номер телефона клиента
 	string getTypeOfService();

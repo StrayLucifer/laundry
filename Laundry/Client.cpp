@@ -41,3 +41,8 @@ Client::Client()
 {
 
 }
+
+Client::~Client()
+{
+
+}

@@ -8,6 +8,7 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	{
 		getline(cin, tName);
 	}
+	tName = tName.substr(0, 30);//ограничение ввода
 	system("cls");
 	cout << "Введите номер телефона:" << endl;
 	do
@@ -15,11 +16,14 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 		cout << "+";
 		getline(cin, tPhone);
 		if (tPhone.size() < 11 || tPhone.size() > 11)// Слишком длинная ИЛИ слишком короткая
-			cout << "\nОшибка,повторите ввод\n";
+		cout << "\nОшибка,повторите ввод\n";
+		system("pause");
+		system("cls");
 	} while (tPhone.size() < 11 || (tPhone.size() > 11));
-
+	system("cls");
 	cout << "Тип услуги:" << endl;
 	getline(cin, tTypeOfService);
+	tTypeOfService = tTypeOfService.substr(0, 15); //ограничение ввода
 	system("cls");
 	cout << "Введите дату:" << endl;
 	cin >> tDate;
@@ -41,7 +45,7 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	{
 		system("cls");
 		cout << "Введите стоимость услуги:" << endl;
-		cin >> tPay;
+		cin >> tPay; 
 		if (tPay < 0)
 		{
 			cout << "Введён неправльный формат стоимости услуги" << endl;
