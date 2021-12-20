@@ -1,6 +1,7 @@
 #ifndef Income_H
 #define Income_H
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 class Income

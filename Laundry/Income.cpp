@@ -12,21 +12,27 @@ int Income::getTotalProfit()
 }
 
 void Income::display()
+//cout << setw(30) << (*IterClient)->getName() << " || " << setw(13) << "+" << (*IterClient)->getPhone() << " || " << setw(15) << (*IterClient)->getTypeOfService() << " || " << setw(8) << (*IterClient)->ConvDate() << "/" << (*IterClient)->ConvMonth() << setw(7) << " || " << setw(7) << (*IterClient)->getPay() << endl;
 {
-	cout << "\nÌåñÿö\tßíâ\tÔåâ\tÌàð\tÀïð\tÌàé\tÈþí\tÈþë\tÀâã\tÑåí\tÎêò\tÍîÿ\tÄåê\n" << endl
-		<< "----------------------------------------------------------------------------------------------------\n" << endl;
+	cout << setw(95) << "Ìåñÿöû" << endl;
+	cout << "" << endl;
+	cout << setw(8) << "ßíâ" << setw(8) << " || " << setw(8) << "Ôåâ" << setw(8) << " || " << setw(8) << "Ìàð" << setw(8) << " || "<< setw (8) << "Àïð" << setw(8) << " || " << setw(8) << "Ìàé" << setw(8) << " || " << setw(8) << "Èþí" << setw(8) << " || " << setw(8) << "Èþë" << setw(8) << " || " << setw(8) << "Àâã" << setw(8) << " || " << setw (8) << "Ñåí" << setw(8) << " || " << setw (8) << "Îêò" << setw(8) << "|| " << setw (8) << "Íîÿ" << setw(8) << " || " << setw (8) << "Äåê" << setw(8) << " || " << setw (8) << endl;
+		//cout << "----------------------------------------------------------------------------------------------------\n" << endl;
 	if (TotalProfit == 0)
-		cout << "***Íåò ïëàòåæåé!***\n" << endl;
+	{
+		cout << "" << endl;
+		cout << setw(110) << "***Íåò ïëàòåæåé!***\n" << endl;
+	}
 	else
 	{
 		for (int i = 1; i <= 12; i++)
 		{
 			if (IncomeMonth[i] == 0)
 			{
-				cout << " 0 ";
+				cout << setw(8) << " 0 " << setw(8) << "    ";
 			}
 			else
-				cout << "\t" << IncomeMonth[i] << "\t";
+				cout << setw(10) << IncomeMonth[i] << setw(6) << "    ";
 		}
 	}
 	cout << "\n";

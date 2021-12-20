@@ -35,10 +35,10 @@ void ExpenseRecord:: annualReport(Income& _Income, Expense& _Expense)
 		cout << '\t' << ((*IterExpenses)->getCategory()) << '\t' << ((*IterExpenses)->getAmount()) << endl;
 		IterExpenses++;
 	}
-	cout << "Расходы всего:\t\t";
+	cout << "\tРасходы всего:\t\t";
 	cout << _Expense.getTotalExpense() << endl;
 	// вычисляем прибыльность
-	cout << "\nБаланс:\t\t\t" << _Income.getTotalProfit()-_Expense.getTotalExpense() << endl;
+	cout << "\nБаланс:\t\t" << _Income.getTotalProfit()-_Expense.getTotalExpense() << endl;
 	cout << "\n";
 }
 
