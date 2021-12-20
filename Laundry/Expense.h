@@ -28,6 +28,8 @@ public:
 	int getAmount();
 	string getCategory();
 	string getPayee();
+	string ConvDay();
+	string ConvMonth();
 
 };
 #endif

@@ -13,7 +13,7 @@ void ExpenseRecord::display() // распечатываем все расходы
 		IterExpenses = VectorExpenses.begin();
 		while (IterExpenses != VectorExpenses.end())
 		{ // распечатываем все расходы
-			cout << setw(5) << (*IterExpenses)->getMonth() << '/' << (*IterExpenses)->getDay()<< setw(5) << "||" << setw(26) << (*IterExpenses)->getPayee() << setw(12) << "||" << "";
+			cout << setw(5) << (*IterExpenses)->ConvMonth() << '/' << (*IterExpenses)->ConvDay()<< setw(5) << "||" << setw(26) << (*IterExpenses)->getPayee() << setw(12) << "||" << "";
 			cout << setw(15) <<(*IterExpenses)->getAmount() << setw(10) << "||" << setw(15) << (*IterExpenses)->getCategory() << endl;
 			IterExpenses++;
 		}
