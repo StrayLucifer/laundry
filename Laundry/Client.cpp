@@ -12,9 +12,40 @@ string Client::getPhone() //геттер возвращает ФИО клиен�
 }
 //--------------------------------------------------------
 
+string Client::ConvDate()
+{
+	string sDate;
+	if (Date < 10)
+	{
+		sDate = "0" + std::to_string(Date);
+		return sDate;
+	}
+	else return std::to_string(Date);
+}
+
 int Client::getDate()
 {
+	/*string sDate;
+	if (Date < 10)
+	{
+		sDate = "0" + std::to_string(Date);
+		return sDate;
+	}
+	else
+	{*/
 	return Date;
+	/*}*/
+}
+
+string Client::ConvMonth()
+{
+	string sMonth;
+	if (Month < 10)
+	{
+		sMonth = "0" + std::to_string(Month);
+		return sMonth;
+	}
+	else return std::to_string(Month);
 }
 
 int Client::getMonth()

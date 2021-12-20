@@ -22,6 +22,8 @@ public:
 	string getName(); //возвращает ФИО клиента
 	string getPhone(); //возвращает номер телефона клиента
 	string getTypeOfService();
+	string ConvDate();
+	string ConvMonth();
 	int getDate();
 	int getMonth();
 	int getPay();

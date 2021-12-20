@@ -13,9 +13,9 @@ void ExpenseInputScreen::setExpense(ExpenseRecord& ExpenseRecord, Expense & _Exp
 	cin.ignore(80, '\n');
 	cout << "¬ведите категорию расходов (–емонт, Ќалоги): ";
 	getline(cin, category);
-	cout << "¬ведите получател€ (ѕростоквашиноЁлектро—быт): ";
+	cout << "¬ведите получател€: ";
 	getline(cin, payee);
-	cout << "¬ведите сумму (39.95): ";
+	cout << "¬ведите сумму: ";
 	cin >> amount;
 	_Expense.setTotalExpense(amount);
 	cin.ignore(80, '\n');

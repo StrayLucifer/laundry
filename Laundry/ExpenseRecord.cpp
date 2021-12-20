@@ -2,17 +2,19 @@
 
 void ExpenseRecord::display() // распечатываем все расходы
 {
-	cout << "\nДата\tПолучатель\tСумма\tКатегория\n"
-		<< "----------------------------------------\n" << endl;
+	cout << setw(8) << "Дата" << setw(5) << "||" << setw(23) << "Получатель" << setw(15) << "||" << setw(15) << "Сумма" << setw(10) << "||" << setw(15) << "Категория" << endl;
 	if (VectorExpenses.size() == 0) // В контейнере нет расходов
-		cout << "***Расходов нет***\n" << endl;
+	{
+		cout << "" << endl;
+		cout << setw(60) << "***Расходов нет***\n" << endl;
+	}
 	else
 	{
 		IterExpenses = VectorExpenses.begin();
 		while (IterExpenses != VectorExpenses.end())
 		{ // распечатываем все расходы
-			cout << (*IterExpenses)->getMonth() << '/' << (*IterExpenses)->getDay() << '\t' << (*IterExpenses)->getPayee() << '\t' << '\t';
-			cout << (*IterExpenses)->getAmount() << '\t' << (*IterExpenses)->getCategory() << endl;
+			cout << setw(5) << (*IterExpenses)->getMonth() << '/' << (*IterExpenses)->getDay()<< setw(5) << "||" << setw(26) << (*IterExpenses)->getPayee() << setw(12) << "||" << "";
+			cout << setw(15) <<(*IterExpenses)->getAmount() << setw(10) << "||" << setw(15) << (*IterExpenses)->getCategory() << endl;
 			IterExpenses++;
 		}
 		cout << endl;
