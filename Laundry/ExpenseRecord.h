@@ -19,7 +19,6 @@ public:
 	~ExpenseRecord();
 	void insertExp(Expense*);
 	void display();
-	void annualReport(Income& _Income, Expense &_Expense);
-	//float displaySummary(); // нужно для годового отчета
+	void annualReport(Income& _Income, Expense &_Expense); 
 };
 #endif

@@ -12,7 +12,6 @@ int Income::getTotalProfit()
 }
 
 void Income::display()
-//cout << setw(30) << (*IterClient)->getName() << " || " << setw(13) << "+" << (*IterClient)->getPhone() << " || " << setw(15) << (*IterClient)->getTypeOfService() << " || " << setw(8) << (*IterClient)->ConvDate() << "/" << (*IterClient)->ConvMonth() << setw(7) << " || " << setw(7) << (*IterClient)->getPay() << endl;
 {
 	cout << setw(95) << "Ìוסÿצû" << endl;
 	cout << "" << endl;

@@ -16,8 +16,6 @@ class UserInterface
 private:
 	char key;
 public:
-	/*UserInterface();
-	~UserInterface();*/
 	void interact();
 
 }; // конец класса userInterface

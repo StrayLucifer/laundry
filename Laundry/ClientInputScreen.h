@@ -19,7 +19,6 @@ private:
 	int tPay;
 	string tTypeOfService;
 public:
-	/*ClientInputScreen();*/
 	void setClient(ListOfClients& _ListOfClients, Income&  _Income); // добавить данные о клиенте
 };
 #endif

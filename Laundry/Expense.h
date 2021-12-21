@@ -19,7 +19,7 @@ public:
 	Expense(int m, int d, string c, string p, int a) :
 		Month(m), Day(d), Category(c), Payee(p), Amount(a)
 	{
-		/* тут пусто! */
+		
 	}
 	void setTotalExpense(int expens);
 	int getTotalExpense();

@@ -50,9 +50,9 @@ ListOfClients::~ListOfClients() // деструктор
 //удалить указатели на вектор
 	while (!ListClient.empty())
 	{
-		IterClient = ListClient.begin();
-		delete* IterClient;
-		ListClient.erase(IterClient);
+		IterClient = ListClient.begin(); 
+		delete* IterClient; // Удаляет объект из д памяти
+		ListClient.erase(IterClient); // Удаляет объект из листа
 	}
 }
 

@@ -26,8 +26,7 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	tTypeOfService = tTypeOfService.substr(0, 15); //ограничение ввода
 	system("cls");
 
-	//cout << "¬ведите дату:" << endl;
-	// cin >> tDate;
+	
 	do {
 		system("cls");
 		cout << "¬ведите дату" << endl;

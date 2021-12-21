@@ -25,16 +25,9 @@ string Client::ConvDate()
 
 int Client::getDate()
 {
-	/*string sDate;
-	if (Date < 10)
-	{
-		sDate = "0" + std::to_string(Date);
-		return sDate;
-	}
-	else
-	{*/
+	
 	return Date;
-	/*}*/
+	
 }
 
 string Client::ConvMonth()
@@ -65,7 +58,7 @@ string Client::getTypeOfService()
 
 Client::Client(string name, string phone, string typeofservice, int date, int month, int pay) : Name(name), Phone(phone), TypeOfService(typeofservice), Date(date), Month(month), Pay(pay)
 {
-	/* тут пусто */
+	
 }
 
 Client::Client()
