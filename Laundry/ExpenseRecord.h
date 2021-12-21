@@ -2,7 +2,6 @@
 #define ExpenseRecord_H
 #include <iostream>
 #include <vector>
-#include <list>
 #include <iomanip>
 #include "Expense.h"
 #include "Income.h"

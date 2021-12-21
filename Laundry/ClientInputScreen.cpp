@@ -21,11 +21,11 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 		system("cls");
 	} while (tPhone.size() < 11 || (tPhone.size() > 11));
 	system("cls");
+
 	cout << "Тип услуги:" << endl;
 	getline(cin, tTypeOfService);
 	tTypeOfService = tTypeOfService.substr(0, 15); //ограничение ввода
 	system("cls");
-
 	
 	do {
 		system("cls");
