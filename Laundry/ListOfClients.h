@@ -3,7 +3,9 @@
 #include <list>
 #include "Client.h" 
 #include <iomanip>
+
 //////////////////Класс ListOfClients//////////////////////
+//Класс записей о клиентах
 class ListOfClients
 {
 private:

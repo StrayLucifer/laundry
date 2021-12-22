@@ -20,5 +20,5 @@ private:
 	string tTypeOfService;
 public:
 	void setClient(ListOfClients& _ListOfClients, Income&  _Income); // добавить данные о клиенте
-};
+};//конец класса ClientInputScreen
 #endif

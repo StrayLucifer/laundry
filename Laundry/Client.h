@@ -3,9 +3,11 @@
 
 #include <string>
 #include <iostream>
-
 using namespace std;
 
+
+//////////////////Класс Client//////////////////////
+//этот класс содержит свойста(поля) клиента, а также методы для работы с ними
 class Client
 {
 private:
@@ -27,5 +29,5 @@ public:
 	int getDate();
 	int getMonth();
 	int getPay();
-}; 
+}; //конец класса Client
 #endif

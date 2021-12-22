@@ -5,9 +5,9 @@
 #include <iomanip>
 #include "Expense.h"
 #include "Income.h"
-
 using namespace std; 
 
+//////////////////Класс ExpenseRecord//////////////////////
 //Класс записей о затратах
 class ExpenseRecord
 {
@@ -19,5 +19,5 @@ public:
 	void insertExp(Expense*);
 	void display();
 	void annualReport(Income& _Income, Expense &_Expense); 
-};
+};// конец класса ExpenseRecord
 #endif

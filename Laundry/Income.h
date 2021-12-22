@@ -4,6 +4,8 @@
 #include <iomanip>
 using namespace std;
 
+//////////////////Income//////////////////////
+//Класс для работы с доходами
 class Income
 {
 private:
@@ -13,5 +15,5 @@ public:
 	void setIncomeMonth(int i, int income);
 	int getTotalProfit();
 	void display();
-};
+};// конец класса Income
 #endif

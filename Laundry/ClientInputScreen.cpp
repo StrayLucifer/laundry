@@ -10,18 +10,21 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	}
 	tName = tName.substr(0, 30);//ограничение ввода
 	system("cls");
-	cout << "Введите номер телефона:" << endl;
 	do
 	{
+		cout << "\n";
+		cout << "Введите номер телефона:" << endl;
 		cout << "+";
 		getline(cin, tPhone);
 		if (tPhone.size() < 11 || tPhone.size() > 11)// Слишком длинная ИЛИ слишком короткая
-		cout << "\nОшибка,повторите ввод\n";
-		system("pause");
+		{
+			cout << "\nОшибка,повторите ввод\n";
+			system("pause");
+		}
 		system("cls");
 	} while (tPhone.size() < 11 || (tPhone.size() > 11));
 	system("cls");
-
+	cout << "\n";
 	cout << "Тип услуги:" << endl;
 	getline(cin, tTypeOfService);
 	tTypeOfService = tTypeOfService.substr(0, 15); //ограничение ввода
@@ -29,6 +32,7 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 	
 	do {
 		system("cls");
+		cout << "\n";
 		cout << "Введите дату" << endl;
 		cin >> tDate;
 		if (tDate > 31 || tDate <= 0)
@@ -39,10 +43,11 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 		}
 		else break;
 	} 	while (true);
-	system("cls");
+
 	do
 	{
 		system("cls");
+		cout << "\n";
 		cout << "Введите месяц:" << endl;
 		cin >> tMonth;
 		if (tMonth > 12 || tMonth <= 0)
@@ -54,10 +59,11 @@ void ClientInputScreen::setClient(ListOfClients& _ListOfClients, Income& _Income
 		else break;
 		
 	} while (true);
-	system("cls");
+
 	do
 	{
 		system("cls");
+		cout << "\n";
 		cout << "Введите стоимость услуги:" << endl;
 		cin >> tPay; 
 		if (tPay < 0)

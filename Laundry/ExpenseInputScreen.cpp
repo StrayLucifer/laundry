@@ -7,6 +7,7 @@ void ExpenseInputScreen::setExpense(ExpenseRecord& ExpenseRecord, Expense & _Exp
 	float amount;
 	do {
 		system("cls");
+		cout << "\n";
 		cout << "¬ведите мес€ц:" << endl;
 		cin >> month;
 		if (month > 12 || month <= 0)
@@ -21,6 +22,7 @@ void ExpenseInputScreen::setExpense(ExpenseRecord& ExpenseRecord, Expense & _Exp
 	cin.ignore(80, '\n');
 	do {
 		system("cls");
+		cout << "\n";
 		cout << "¬ведите день:" << endl;
 		cin >> day;
 		if (day > 31 || day <= 0)
@@ -32,6 +34,7 @@ void ExpenseInputScreen::setExpense(ExpenseRecord& ExpenseRecord, Expense & _Exp
 		else break;
 	} while (true);
 	system("cls");
+	cout << "\n";
 	cin.ignore(80, '\n');
 	cout << "¬ведите категорию расходов (–емонт, Ќалоги): ";
 	getline(cin, category);

@@ -22,6 +22,7 @@ void ListOfClients::DeleteClient()
 			if ((*IterClient)->getName() == delFIO)
 			{
 				cout << "\n";
+				delete* IterClient;
 				ListClient.erase(IterClient);
 				cout << "Клиент успешно удалён!" << endl;
 				cout << "\n";
@@ -51,7 +52,7 @@ ListOfClients::~ListOfClients() // деструктор
 	while (!ListClient.empty())
 	{
 		IterClient = ListClient.begin(); 
-		delete* IterClient; // Удаляет объект из д памяти
+		delete* IterClient; // Удаляет объект из памяти
 		ListClient.erase(IterClient); // Удаляет объект из листа
 	}
 }

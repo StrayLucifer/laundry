@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//////////////////Класс Expense//////////////////////
+//этот класс содержит свойста(поля) расходов, а также методы для работы с ними
 class Expense
 {
 private:
@@ -31,5 +33,5 @@ public:
 	string ConvDay();
 	string ConvMonth();
 
-};
+};//конец класса Expense
 #endif

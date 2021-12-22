@@ -14,13 +14,13 @@ void UserInterface::interact()
 	while (true)
 	{
 		cout << "\n";
-		cout << "Для ввода данных нажмите '1' \n" << "Для вывода данных нажмите '2' \n" << "Для удаления клиента нажмите '3': \n" << "Для выхода 'q': \n";
+		cout << " Для ввода данных нажмите '1' \n" << " Для вывода данных нажмите '2' \n" << " Для удаления клиента нажмите '3' \n" << " Для выхода 'q' \n";
 		key = _getch();
 		system("cls");
 		if (key == '1') // ввод данных
 		{
 			cout << "\n";
-			cout << "Для добавление клиента нажмите '1', \n" << "Для записи расходов нажмите '2', \n";
+			cout << " Для добавление клиента нажмите '1' \n" << " Для записи расходов нажмите '2' \n" << " Вернуться назад '3'\n";
 			key = _getch();
 			system("cls");
 			switch (key)
@@ -36,7 +36,9 @@ void UserInterface::interact()
 				system("pause");
 				system("cls");
 				break;
-
+			case '3':
+				system("cls");
+				break;
 			default:
 				cout << "Неизвестная функция\n";
 				cout << "\n";
@@ -48,7 +50,7 @@ void UserInterface::interact()
 		else if (key == '2') // вывод данных
 		{
 			cout << "\n";
-			cout << "Для вывода клиентов нажмите '1', \n" << " Для вывода дохода нажмите '2' \n" << " Для вывода расходов нажмите '3', \n" << "Для вывода годового отчета нажмите '4': \n";
+			cout << " Для вывода клиентов нажмите '1' \n" << " Для вывода дохода нажмите '2' \n" << " Для вывода расходов нажмите '3' \n" << " Для вывода годового отчета нажмите '4' \n" << " Вернуться назад '5' \n";
 			key = _getch();
 			system("cls");
 			switch (key)
@@ -78,6 +80,10 @@ void UserInterface::interact()
 				system("pause");
 				system("cls");
 				break;
+			case '5':
+				cout << "\n";
+				system("cls");
+				break;
 			default:
 				cout << "Неизвестная функция вывода\n";
 				system("pause");
@@ -88,7 +94,7 @@ void UserInterface::interact()
 		{
 			_ListOfClients.DeleteClient();
 		}
-		else if (key == 'q')
+		else if (key == 'q' || key == 'й')
 			return; // выход
 		else
 		{
